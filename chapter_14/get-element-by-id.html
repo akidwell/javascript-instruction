@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>get element by id</title>
+</head>
+<!-- <body>
+
+        <p>My ostrich Gertrude:</p>
+        <p><img id="gertrude" src="https://eloquentjavascript.net/img/ostrich.png"></p>
+        
+        <script>
+          let ostrich = document.getElementById("gertrude");
+          console.log("the source:" + ostrich.src);
+        </script>
+        <br> -->
+
+<!-- change the doc -->
+<!-- 
+<p>One</p>
+<p>Two</p>
+<p>Three</p>
+
+<script>
+  let paragraphs = document.body.getElementsByTagName("p");
+  document.body.insertBefore(paragraphs[2], paragraphs[0]);
+</script> -->
+
+<!-- creating a node -->
+<p>The <img src="https://eloquentjavascript.net/img/cat.png" alt="Cat"> in the
+    <img src="https://eloquentjavascript.net/img/hat.png" alt="Hat">.</p><br>
+
+    <p><button onclick="replaceImages()">Replace</button></p>
+    
+    <script>
+            function replaceImages() {
+              let images = document.body.getElementsByTagName("img");
+              //loop that starts at the last index of array images
+              for (let i = images.length - 1; i >= 0; i--) {
+                let image = images[i];
+                if (image.alt) {
+                  let text = document.createTextNode(image.alt);
+                  image.parentNode.replaceChild(text, image);
+                }
+              }
+            }
+          </script>
+
+
+</body>
+</html>

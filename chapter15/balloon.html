@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Balloon exercise</title>
+</head>
+
+<body>
+  <p> 🐱‍🐉 </p>
+
+  <script>
+    let p = document.querySelector("p");
+    let size;
+
+    function setSize(newSize) {
+      size = newSize;
+      p.style.fontSize = size + "px";
+    }
+    setSize(75);
+
+    function handleArrow(event) {
+      if (event.key == "ArrowUp") {
+        if (size > 250) {
+          p.textContent = "💥";
+        } else {
+          setSize(size * 1.1);
+        }
+      } else if (event.key == "ArrowDown") {
+        setSize(size * 0.9);
+      }
+    }
+    document.body.addEventListener("keydown", handleArrow);
+  </script>
+  <!-- 
+       <script>
+          window.addEventListener("keydown", event => {
+            if (event.key == "ArrowUp") {
+             let b = document.querySelector("p").style.fontSize = size * 1.1;
+            
+            }
+          });
+          window.addEventListener("keyup", event => {
+            if (event.key == "ArrowDown") {
+              let b = document.querySelector("p").style.fontSize = size * .09;
+            }
+          });
+          </script> -->
+
+</body>
+
+</html>

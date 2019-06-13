@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Get "a" tags</title>
+</head>
+<body>
+    <h1>
+    Some links: </h1>
+    <a href= "https://eloquentjavascript.net/14_dom.html">js book</a><br>
+    <a href= "https://www.cnn.com/"> cnn</a><br>
+    <a href = "https://www.tazikiscafe.com/menu"> tazikiscafe</a>
+ 
+<script>
+   let link = document.body.getElementsByTagName("a")[0];
+console.log(link.href);
+
+let links = document.body.getElementsByTagName("a");
+console.log("enhanced for loop")
+for (let l of links) {
+    console.log(l.href);
+}
+
+console.log("old school for loop");
+for (let i = 0; i < links.length; i++) {
+    console.log(l.href);
+}
+
+</script>
+
+</body>
+</html>
